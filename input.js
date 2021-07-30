@@ -26,6 +26,10 @@ const setupInput = (conn) => {
       
       connection.write("Move: right")
     }
+    if (input === 'e') {
+      
+      connection.write("Say: EZ")
+    }
     if (input === '\u0003') {
       process.exit();
     }
