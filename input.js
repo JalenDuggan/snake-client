@@ -1,26 +1,30 @@
 const net = require("net");
 
-const setupInput = () => {
+let connection;
+
+const setupInput = (conn) => {
+  connection = conn;
+
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
   stdin.resume();
   const handleUserInput = (input) => {
     if (input === 'w') {
-      stdin.write("Move: up")
+      connection.write("Move: up")
       
     }
     if (input === 'a') {
-      stdin.write("Move: left")
+      connection.write("Move: left")
       
     }
     if (input === 's') {
-      stdin.write("Move: down")
+      connection.write("Move: down")
       
     }
     if (input === 'd') {
       
-      stdin.write("Move: right")
+      connection.write("Move: right")
     }
     if (input === '\u0003') {
       process.exit();

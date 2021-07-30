@@ -5,4 +5,3 @@ const setupInput = require('./input');
 connect();
 console.log("Connecting ...");
 
-setupInput()
