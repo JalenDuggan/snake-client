@@ -12,6 +12,14 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("We are connected");
     conn.write("Name: IDK")
+
+    // for (let i = 0; i < 4; i++) {
+      
+    //   setTimeout(() => {
+    //     conn.write("Move: up")
+    //   }, 500 * i);
+      
+    // }
   })
 
   conn.on("data", () => {
